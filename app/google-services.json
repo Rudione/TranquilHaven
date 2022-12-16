@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "782551149128",
+    "project_id": "tranquilhaven-3f055",
+    "storage_bucket": "tranquilhaven-3f055.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782551149128:android:0e3e09a621c302774b067d",
+        "android_client_info": {
+          "package_name": "com.rudione.tranquilhaven"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "782551149128-ormme9klg2a86du40ra2t0k16t5m9elg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8P_D2cfHZPjX5pevT-3UBISDzBb41-Hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782551149128-ormme9klg2a86du40ra2t0k16t5m9elg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
