@@ -22,22 +22,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4"
-        />
+        app:layout_constraintGuide_percent="0.4" />
 
     <TextView
         android:id="@+id/introduction_tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start your future"
+        android:text="Start "
         android:textSize="36sp"
         android:fontFamily="@font/incompleetaregularreveal"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginStart="10dp" />
     <TextView
         android:id="@+id/introduction_tv2"
         android:layout_width="wrap_content"
@@ -66,6 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/Widget.Material3.Button.ElevatedButton"
+        android:tint="#99000000"
         android:text="START >>>"
         android:textSize="18dp"
         android:elevation="50dp"
