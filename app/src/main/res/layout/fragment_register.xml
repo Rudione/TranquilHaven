@@ -115,7 +115,7 @@
             app:layout_constraintEnd_toStartOf="@id/guideLineLoginRight"
             android:text="Forgot password?"/>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/register_bt_login"
             android:layout_width="225dp"
             android:layout_height="wrap_content"
