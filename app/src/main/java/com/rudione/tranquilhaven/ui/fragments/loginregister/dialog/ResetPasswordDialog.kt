@@ -14,6 +14,7 @@ fun Fragment.setupBottomSheetDialog(
 ) {
     val dialog = BottomSheetDialog(requireContext(), R.style.DialogStyle)
     val view = layoutInflater.inflate(R.layout.reset_password_dialog, null)
+
     dialog.setContentView(view)
     dialog.behavior.state = BottomSheetBehavior.STATE_EXPANDED
     dialog.show()

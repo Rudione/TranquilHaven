@@ -23,9 +23,7 @@ class AccountOptionsFragment : Fragment(R.layout.fragment_account_options) {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentAccountOptionsBinding.inflate(inflater)
-        /* val background = binding.background
-        background.loadUrl("file://android_asset/background.html") */
-        return super.onCreateView(inflater, container, savedInstanceState)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

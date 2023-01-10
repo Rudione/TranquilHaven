@@ -3,47 +3,62 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login_register_graph"
-    app:startDestination="@id/NavaccountOptionsFragment">
+    app:startDestination="@id/introductionFragment">
 
     <fragment
-        android:id="@+id/NavintroductionFragment_nav"
+        android:id="@+id/introductionFragment"
         android:name="com.rudione.tranquilhaven.ui.fragments.loginregister.IntroductionFragment"
-        android:label="NavIntroductionFragment"
         tools:layout="@layout/fragment_introduction">
         <action
             android:id="@+id/action_introductionFragment_to_accountOptionsFragment"
-            app:destination="@id/NavaccountOptionsFragment" />
+            app:destination="@id/accountOptionsFragment"
+            app:enterAnim="@anim/from_bottom"
+            />
     </fragment>
     <fragment
-        android:id="@+id/NavloginFragment"
-        android:name="com.rudione.tranquilhaven.ui.fragments.loginregister.LoginFragment"
-        android:label="NavLoginFragment"
-        tools:layout="@layout/fragment_login">
-        <action
-            android:id="@+id/action_loginFragment_to_registerFragment"
-            app:destination="@id/NavregisterFragment_nav"
-            app:popUpTo="@id/NavaccountOptionsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/NavregisterFragment_nav"
-        android:name="com.rudione.tranquilhaven.ui.fragments.loginregister.RegisterFragment"
-        android:label="NavRegisterFragment"
-        tools:layout="@layout/fragment_register">
-        <action
-            android:id="@+id/action_registerFragment_to_loginFragment"
-            app:destination="@id/NavloginFragment"
-            app:popUpTo="@id/NavaccountOptionsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/NavaccountOptionsFragment"
+        android:id="@+id/accountOptionsFragment"
         android:name="com.rudione.tranquilhaven.ui.fragments.loginregister.AccountOptionsFragment"
-        android:label="NavAccountOptionsFragment"
         tools:layout="@layout/fragment_account_options">
         <action
             android:id="@+id/action_accountOptionsFragment_to_loginFragment"
-            app:destination="@id/NavloginFragment" />
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
         <action
             android:id="@+id/action_accountOptionsFragment_to_registerFragment"
-            app:destination="@id/NavregisterFragment_nav" />
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.rudione.tranquilhaven.ui.fragments.loginregister.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/accountOptionsFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.rudione.tranquilhaven.ui.fragments.loginregister.RegisterFragment"
+
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/accountOptionsFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"/>
     </fragment>
 </navigation>

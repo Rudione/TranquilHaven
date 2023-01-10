@@ -2,7 +2,6 @@ package com.rudione.tranquilhaven.viewmodel
 
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
 import com.rudione.tranquilhaven.data.model.User
 import com.rudione.tranquilhaven.utils.*
