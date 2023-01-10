@@ -1,6 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/register_tv_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tranquil Haven."
+            android:textSize="26dp"
+            android:textColor="@color/logo_black"
+            android:drawablePadding="10dp"
+            style="@style/TextAppearance.Material3.TitleSmall"
+            android:drawableStart="@drawable/ic_icons8_facebook_96"
+            android:fontFamily="@font/incompleetaregular"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="70dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/register_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/palanquin_medium"
+            app:layout_constraintTop_toBottomOf="@id/register_tv_main"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Let's Register"/>
+
+        <TextView
+            android:id="@+id/register_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/palanquin_medium"
+            app:layout_constraintTop_toBottomOf="@id/register_tv1"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Do you have an account? Log in"/>
+
+        <EditText
+            android:id="@+id/register_et_first_name"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="@id/guideLineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guideLineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/register_tv2"
+            style="@style/editText"
+            android:hint="First Name"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/register_et_last_name"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="@id/guideLineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guideLineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/register_et_first_name"
+            style="@style/editText"
+            android:hint="Last Name"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/register_et_email"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="@id/guideLineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guideLineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/register_et_last_name"
+            style="@style/editText"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/register_et_password"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="@id/guideLineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guideLineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/register_et_email"
+            style="@style/editText"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/register_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/palanquin_medium"
+            app:layout_constraintTop_toBottomOf="@id/register_et_password"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toStartOf="@id/guideLineLoginRight"
+            android:text="Forgot password?"/>
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/register_bt_login"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/guideLineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guideLineLoginRight"
+            android:layout_marginTop="15dp"
+            style="@style/blueButtonStyle"
+            android:text="Register"
+            app:layout_constraintTop_toBottomOf="@id/register_tv3" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            style="@style/Widget.MaterialComponents.CardView"
+            app:layout_constraintStart_toStartOf="@id/guideLineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/register_bt_login">
+
+            <TextView
+                android:id="@+id/register_tv_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/palanquin_medium"
+                android:drawableStart="@drawable/ic_icons8_facebook_48"
+                android:text="  Facebook" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            style="@style/Widget.MaterialComponents.CardView"
+            app:layout_constraintEnd_toEndOf="@id/guideLineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/register_bt_login">
+
+            <TextView
+                android:id="@+id/register_tv_google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/palanquin_medium"
+                android:drawableStart="@drawable/googleg_standard_color_18"
+                android:text="  Google" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineLoginLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.09"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineLoginRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.91"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

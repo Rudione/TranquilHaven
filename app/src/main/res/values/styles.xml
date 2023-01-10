@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="blueButtonStyle">
+        <item name="android:background">@drawable/blue_background</item>
+        <item name="android:fontFamily">@font/incompleetaregular</item>
+        <item name="android:textColor">@color/glass_white</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="whiteButtonStyle">
+        <item name="android:background">@drawable/white_background</item>
+        <item name="android:fontFamily">@font/incompleetaregular</item>
+        <item name="android:textColor">@color/logo_black</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="editText">
+        <item name="android:background">@drawable/white_background</item>
+        <item name="android:gravity">center</item>
+        <item name="singleLine">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/palanquin_medium</item>
+    </style>
+
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+</resources>

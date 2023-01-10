@@ -1,6 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/login_tv_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tranquil Haven."
+            android:textSize="26dp"
+            android:textColor="@color/logo_black"
+            android:drawablePadding="10dp"
+            style="@style/TextAppearance.Material3.TitleSmall"
+            android:drawableStart="@drawable/ic_icons8_facebook_96"
+            android:fontFamily="@font/incompleetaregular"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="120dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:id="@+id/login_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/palanquin_medium"
+            app:layout_constraintTop_toBottomOf="@id/login_tv_main"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Let's Log in"/>
+
+        <TextView
+            android:id="@+id/login_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/palanquin_medium"
+            app:layout_constraintTop_toBottomOf="@id/login_tv1"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Don't have an account? Register"/>
+
+        <EditText
+            android:id="@+id/login_et_email"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="@id/guideLineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guideLineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/login_tv2"
+            style="@style/editText"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/login_et_password"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="@id/guideLineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guideLineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/login_et_email"
+            style="@style/editText"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/login_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/palanquin_medium"
+            app:layout_constraintTop_toBottomOf="@id/login_et_password"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toStartOf="@id/guideLineLoginRight"
+            android:text="Forgot password?"/>
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/login_bt_login"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/guideLineLoginLeft"
+            app:layout_constraintEnd_toEndOf="@id/guideLineLoginRight"
+            android:layout_marginTop="15dp"
+            style="@style/blueButtonStyle"
+            android:text="Log in"
+            app:layout_constraintTop_toBottomOf="@id/login_tv3" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/guideLineLoginLeft"
+            app:layout_constraintTop_toBottomOf="@id/login_bt_login">
+
+            <TextView
+                android:id="@+id/login_tv_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/palanquin_medium"
+                android:drawableStart="@drawable/ic_icons8_facebook_48"
+                android:text="  Facebook" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@id/guideLineLoginRight"
+            app:layout_constraintTop_toBottomOf="@id/login_bt_login">
+
+            <TextView
+                android:id="@+id/login_tv_google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/palanquin_medium"
+                android:drawableStart="@drawable/googleg_standard_color_18"
+                android:text="  Google" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineLoginLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.09"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineLoginRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.91"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
