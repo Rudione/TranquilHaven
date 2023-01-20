@@ -1,4 +1,4 @@
-package com.rudione.tranquilhaven.ui.fragments.loginregister
+package com.rudione.tranquilhaven.ui.authorization.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,8 +13,8 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.rudione.tranquilhaven.R
 import com.rudione.tranquilhaven.databinding.FragmentLoginBinding
-import com.rudione.tranquilhaven.ui.activities.ShoppingActivity
-import com.rudione.tranquilhaven.ui.fragments.loginregister.dialog.setupBottomSheetDialog
+import com.rudione.tranquilhaven.ui.store.ShoppingActivity
+import com.rudione.tranquilhaven.ui.authorization.dialog.setupBottomSheetDialog
 import com.rudione.tranquilhaven.utils.Resource
 import com.rudione.tranquilhaven.viewmodel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint

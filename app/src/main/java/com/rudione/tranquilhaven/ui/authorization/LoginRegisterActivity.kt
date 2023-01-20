@@ -1,4 +1,4 @@
-package com.rudione.tranquilhaven.ui.activities
+package com.rudione.tranquilhaven.ui.authorization
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,9 +6,9 @@ import com.rudione.tranquilhaven.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ShoppingActivity : AppCompatActivity() {
+class LoginRegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_shopping)
+        setContentView(R.layout.activity_login_register)
     }
 }

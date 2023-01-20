@@ -1,7 +1,6 @@
-package com.rudione.tranquilhaven.ui.fragments.loginregister
+package com.rudione.tranquilhaven.ui.authorization.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.rudione.tranquilhaven.R
 import com.rudione.tranquilhaven.databinding.FragmentAccountOptionsBinding
-import com.rudione.tranquilhaven.databinding.FragmentLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

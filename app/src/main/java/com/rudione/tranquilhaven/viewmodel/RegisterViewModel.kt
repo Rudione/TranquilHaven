@@ -28,12 +28,10 @@ class RegisterViewModel @Inject constructor(
     fun createAccountViewEmailAndPassword(user: User, password: String) {
         if (checkValidation(user, password)) {
 
-            runBlocking {
-                _register.emit(Resource.Loading())
-            }
+            _register.value = Resource.Loading()
 
             firebaseAuth
-                .signInWithEmailAndPassword(user.email, password)
+                .createUserWithEmailAndPassword(user.email, password)
                 .addOnSuccessListener { it ->
                     it.user?.let {
                         saveUserInfo(it.uid, user)

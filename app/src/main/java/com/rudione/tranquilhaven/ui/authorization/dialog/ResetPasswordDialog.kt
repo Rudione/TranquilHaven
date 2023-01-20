@@ -1,10 +1,8 @@
-package com.rudione.tranquilhaven.ui.fragments.loginregister.dialog
+package com.rudione.tranquilhaven.ui.authorization.dialog
 
-import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.rudione.tranquilhaven.R
