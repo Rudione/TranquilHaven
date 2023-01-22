@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ProductsAdder</string>
+    <string name="product_general_information">Product general information:</string>
+    <string name="category">Category (company)</string>
+    <string name="name">Name</string>
+    <string name="product_type">Product type</string>
+    <string name="price">Price</string>
+    <string name="offer_percentage_optional">Offer percentage (Optional)</string>
+    <string name="product_description_optional">Product description (Optional)</string>
+</resources>
