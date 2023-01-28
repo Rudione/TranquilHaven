@@ -101,7 +101,7 @@
                     android:textColor="@color/black" />
 
                 <EditText
-                    android:id="@+id/edSizes"
+                    android:id="@+id/edDetails"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Details about item"
