@@ -4,11 +4,11 @@ import android.util.Patterns
 
 
 fun validEmail(email: String): RegisterValidation {
-    if(email.isEmpty()) {
+    if (email.isEmpty()) {
         return RegisterValidation.Failed("Email field is empty")
     }
 
-    if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+    if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
         return RegisterValidation.Failed("Wrong email type")
     }
 
