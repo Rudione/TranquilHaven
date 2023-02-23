@@ -39,20 +39,21 @@ class IntroductionFragment : Fragment(R.layout.fragment_introduction) {
 
         binding.introductionBtStart.setOnClickListener {
             viewModel.startButtonClick()
-            findNavController().navigate(IntroductionViewModel.ACCOUNT_OPTIONS_FRAGMENTS)
+            findNavController().navigate(ACCOUNT_OPTIONS_FRAGMENTS)
         }
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.navigate.observe(viewLifecycleOwner) {
                 when(it) {
-                    IntroductionViewModel.SHOPPING_ACTIVITY -> {
+                    SHOPPING_ACTIVITY -> {
                         Intent(requireActivity(), ShoppingActivity::class.java).also { intent ->
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                             startActivity(intent)
                         }
                     }
-                    IntroductionViewModel.ACCOUNT_OPTIONS_FRAGMENTS -> {
-                        findNavController().navigate(it)
+                    ACCOUNT_OPTIONS_FRAGMENTS -> {
+                        findNavController().navigate(IntroductionViewModel.ACCOUNT_OPTIONS_FRAGMENTS)
+
                     }
                 }
             }

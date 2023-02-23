@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.tabs.TabLayoutMediator
-import com.rudione.tranquilhaven.R
 import com.rudione.tranquilhaven.databinding.FragmentShopBinding
 import com.rudione.tranquilhaven.ui.store.shop.adapters.ShopViewPagerAdapter
 import com.rudione.tranquilhaven.ui.store.shop.categories.*
@@ -27,12 +26,14 @@ class ShopFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val categoriesFragments = arrayListOf(
-            MainFragment(),
+            MainCategoryFragment(),
             AmazonAlexaFragment(),
             GoogleHomeFragment(),
             HomeKitFragment(),
             SmartThingsFragment()
         )
+
+        binding.viewPagerShop.isUserInputEnabled = false
 
         val viewPagerAdapter = ShopViewPagerAdapter(
             categoriesFragments, childFragmentManager, lifecycle

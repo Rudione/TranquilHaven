@@ -164,7 +164,7 @@ class MainActivity : AppCompatActivity() {
                     imagesByteArrays.forEach {
                         val id = UUID.randomUUID().toString()
                         launch {
-                            val imagesStorage = productStorage.child("products/images/$id")
+                            val imagesStorage = productStorage.child("Products/images/$id")
                             val result = imagesStorage.putBytes(it).await()
                             val downloadUrl = result.storage.downloadUrl.await().toString()
                             images.add(downloadUrl)
