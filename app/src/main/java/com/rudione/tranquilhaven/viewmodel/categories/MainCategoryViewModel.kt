@@ -92,4 +92,5 @@ class MainCategoryViewModel @Inject constructor(
                 }
         }
     }
+
 }
