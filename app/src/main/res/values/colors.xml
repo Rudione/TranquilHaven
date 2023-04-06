@@ -18,4 +18,5 @@
     <color name="glass_white">#EDF2F7</color>
     <color name="primary_luxury">#B3CCAE</color>
     <color name="primary_dark_luxury">#689D6D</color>
+    <color name="text_qual">#6E6AAC</color>
 </resources>

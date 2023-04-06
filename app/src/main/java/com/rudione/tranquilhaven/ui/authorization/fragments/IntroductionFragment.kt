@@ -52,7 +52,7 @@ class IntroductionFragment : Fragment(R.layout.fragment_introduction) {
                         }
                     }
                     ACCOUNT_OPTIONS_FRAGMENTS -> {
-                        findNavController().navigate(IntroductionViewModel.ACCOUNT_OPTIONS_FRAGMENTS)
+                        findNavController().navigate(R.id.action_introductionFragment_to_accountOptionsFragment)
 
                     }
                 }
