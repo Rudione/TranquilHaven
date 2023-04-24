@@ -55,11 +55,7 @@ class RegisterFragment : Fragment() {
                 viewModel.createAccountViewEmailAndPassword(user, password)
             }
         }
-/*
-Ваш тестовий бал: 60 з 72 можливих.
-Ваш рейтинговий бал: 182 з 200 можливих.
-Ваш бал ДПА: 8 з 12 можливих.
- */
+
         lifecycleScope.launch {
             viewModel.register.collect() {
                 when(it) {

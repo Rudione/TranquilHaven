@@ -51,10 +51,6 @@ class IntroductionFragment : Fragment(R.layout.fragment_introduction) {
                             startActivity(intent)
                         }
                     }
-                    ACCOUNT_OPTIONS_FRAGMENTS -> {
-                        findNavController().navigate(R.id.action_introductionFragment_to_accountOptionsFragment)
-
-                    }
                 }
             }
         }
