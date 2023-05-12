@@ -109,7 +109,7 @@ class UserAccountViewModel @Inject constructor(
             }
         }
     }
- //31 15:50
+ //32
     private fun saveUserInformation(user: User, shouldRetrievedOldImage: Boolean) {
         firestore.runTransaction { transaction ->
             val documentRef = firestore.collection("user").document(auth.uid!!)
