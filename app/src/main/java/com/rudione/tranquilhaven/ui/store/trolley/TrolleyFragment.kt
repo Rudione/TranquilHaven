@@ -73,6 +73,11 @@ class TrolleyFragment : Fragment() {
             findNavController().navigate(action)
         } */
 
+        binding.buttonAddToCart.setOnClickListener {
+            val action = TrolleyFragmentDirections.actionTrolleyFragmentToBillingFragment(totalPrice, cartAdapter.differ.currentList.toTypedArray())
+            findNavController().navigate(action)
+        }
+
         lifecycleScope.launchWhenStarted {
             viewModel.deleteDialog.collectLatest {
                 val alertDialog = AlertDialog.Builder(requireContext()).apply {

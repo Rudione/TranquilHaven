@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/shopping_graph"
-    app:startDestination="@id/shopFragment">
+    app:startDestination="@id/userAccountFragment">
 
     <fragment
         android:id="@+id/profileFragment"
@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_trolleyFragment_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment" />
+        <action
+            android:id="@+id/action_trolleyFragment_to_billingFragment"
+            app:destination="@id/billingFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -55,4 +58,23 @@
         android:name="com.rudione.tranquilhaven.ui.store.trolley.AddressFragment"
         android:label="fragment_address"
         tools:layout="@layout/fragment_address" />
+    <fragment
+        android:id="@+id/billingFragment"
+        android:name="com.rudione.tranquilhaven.ui.store.trolley.billing.BillingFragment"
+        android:label="BillingFragment"
+        tools:layout="@layout/fragment_billing" >
+        <action
+            android:id="@+id/action_billingFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+        <argument
+            android:name="totalPrice"
+            app:argType="float" />
+        <argument
+            android:name="products"
+            app:argType="com.rudione.tranquilhaven.data.model.CartProduct[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/userAccountFragment"
+        android:name="com.rudione.tranquilhaven.ui.store.profile.settings.UserAccountFragment"
+        android:label="UserAccountFragment" />
 </navigation>
