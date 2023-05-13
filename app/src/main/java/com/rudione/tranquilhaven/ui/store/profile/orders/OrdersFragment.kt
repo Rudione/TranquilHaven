@@ -8,9 +8,11 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.rudione.tranquilhaven.databinding.FragmentOrdersBinding
+import com.rudione.tranquilhaven.ui.store.profile.orders.adapters.OrdersAdapter
 import com.rudione.tranquilhaven.utils.Resource
 import com.rudione.tranquilhaven.viewmodel.OrdersViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -53,6 +55,11 @@ class OrdersFragment: Fragment() {
                     else -> Unit
                 }
             }
+        }
+
+        ordersAdapter.onClick = {
+            val action = OrdersFragmentDirections.actionOrdersFragmentToOrderDetailsFragment(it)
+            findNavController().navigate(action)
         }
     }
 

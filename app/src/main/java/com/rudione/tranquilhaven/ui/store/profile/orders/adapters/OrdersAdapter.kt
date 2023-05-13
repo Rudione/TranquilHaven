@@ -1,4 +1,4 @@
-package com.rudione.tranquilhaven.ui.store.profile.orders
+package com.rudione.tranquilhaven.ui.store.profile.orders.adapters
 
 import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
@@ -62,7 +62,7 @@ class OrdersAdapter: RecyclerView.Adapter<OrdersAdapter.OrdersViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): OrdersAdapter.OrdersViewHolder {
+    ): OrdersViewHolder {
         return OrdersViewHolder(
             OrderItemBinding.inflate(
                 LayoutInflater.from(parent.context),
@@ -72,9 +72,13 @@ class OrdersAdapter: RecyclerView.Adapter<OrdersAdapter.OrdersViewHolder>() {
         )
     }
 
-    override fun onBindViewHolder(holder: OrdersAdapter.OrdersViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: OrdersViewHolder, position: Int) {
         val order = differ.currentList[position]
         holder.bind(order)
+
+        holder.itemView.setOnClickListener {
+            onClick?.invoke(order)
+        }
     }
 
     override fun getItemCount(): Int {

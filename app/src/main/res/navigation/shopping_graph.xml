@@ -80,5 +80,17 @@
     <fragment
         android:id="@+id/ordersFragment"
         android:name="com.rudione.tranquilhaven.ui.store.profile.orders.OrdersFragment"
-        android:label="OrdersFragment" />
+        android:label="OrdersFragment" >
+        <action
+            android:id="@+id/action_ordersFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.rudione.tranquilhaven.ui.store.profile.orders.OrderDetailsFragment"
+        android:label="OrderDetailsFragment" >
+        <argument
+            android:name="order"
+            app:argType="com.rudione.tranquilhaven.data.model.order.Order" />
+    </fragment>
 </navigation>
