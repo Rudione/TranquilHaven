@@ -70,6 +70,10 @@ class OrderDetailsFragment: Fragment() {
             tvTotalPrice.text = "UAH ${order.totalPrice}"
         }
 
+        binding.imageCloseOrder.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
+
         billingProductsAdapter.differ.submitList(order.products)
     }
 

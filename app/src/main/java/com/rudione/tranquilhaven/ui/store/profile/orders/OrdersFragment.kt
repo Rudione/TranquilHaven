@@ -61,6 +61,10 @@ class OrdersFragment: Fragment() {
             val action = OrdersFragmentDirections.actionOrdersFragmentToOrderDetailsFragment(it)
             findNavController().navigate(action)
         }
+
+        binding.imageCloseOrders.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     private fun setupOrdersRv() {
